@@ -7,6 +7,8 @@ RUN apk update && apk add \
 	&& mkdir -p /transmission/ \
 	&& chmod 1777 /transmission
 
+ENV TRANSMISSION_HOME /transmission/config
+
 EXPOSE 9091
 
 ENTRYPOINT ["/usr/bin/transmission-daemon"]
